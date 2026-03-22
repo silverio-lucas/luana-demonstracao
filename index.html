@@ -1,319 +1,670 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SEO Master -->
-    <title>Luana Queiroz | Copywriter para SaaS - Aumente sua Retenção e LTV</title>
-    <meta name="description" content="Especialista em comunicação de back-end para SaaS. Organize seu onboarding, reduza o churn e aumente a retenção de usuários com copy estratégica.">
-    <meta name="keywords" content="copywriter saas, retenção saas, onboarding saas, diminuir churn, luana queiroz copy">
-    <link rel="canonical" href="https://luanacopywriter.com.br/">
-    
+    <title>
+      Luana Queiroz | Copywriter para SaaS - Aumente sua Retenção e LTV
+    </title>
+    <meta
+      name="description"
+      content="Especialista em comunicação de back-end para SaaS. Organize seu onboarding, reduza o churn e aumente a retenção de usuários com copy estratégica."
+    />
+    <meta
+      name="keywords"
+      content="copywriter saas, retenção saas, onboarding saas, diminuir churn, luana queiroz copy"
+    />
+    <link rel="canonical" href="https://luanacopywriter.com.br/" />
+
     <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Tailwind CSS CDN (Nota: Em produção Next.js use o CSS compilado para performance máxima) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons - Defer para não bloquear o carregamento -->
+
+    <!-- Lucide Icons - Defer -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
-    
+
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        accent: '#6366f1',
-                        darkbg: '#050505',
-                        surface: '#0f0f0f',
-                        card: '#161616',
-                    },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              accent: "#4f46e5", // Indigo vibrante
+              darkbg: "#09090b", // Zinc-950
+              surface: "#121214", // Zinc-900 modificado
+              card: "#18181b",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        /* Performance Fix: Font Display */
-        @font-face { font-display: swap; }
+      @font-face {
+        font-display: swap;
+      }
 
-        .glass-card {
-            background: rgba(22, 22, 22, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #a5b4fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-glow {
-            background: radial-gradient(circle at 50% -20%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #6366f1 !important;
-            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
-        }
-        /* Mobile optimization: Prevent content shift */
-        section { min-height: 200px; }
+      .glass-card {
+        background: rgba(24, 24, 27, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .text-gradient {
+        background: linear-gradient(to right, #ffffff 40%, #a5b4fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-glow {
+        background: radial-gradient(
+          circle at 50% -10%,
+          rgba(79, 70, 229, 0.1) 0%,
+          transparent 50%
+        );
+      }
+      input,
+      textarea {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4f46e5 !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+      }
+      section {
+        min-height: 200px;
+      }
+
+      /* Sem itálicos conforme instrução */
+      * {
+        font-style: normal !important;
+      }
     </style>
-</head>
-<body class="bg-darkbg text-slate-300 antialiased selection:bg-accent/30 selection:text-white font-sans">
+  </head>
+  <body
+    class="bg-darkbg text-zinc-400 antialiased selection:bg-accent/30 selection:text-white font-sans"
+  >
+    <!-- Navegação -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-darkbg/80 backdrop-blur-md"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+        aria-label="Navegação Principal"
+      >
+        <div class="text-white font-extrabold text-xl tracking-tighter">
+          LUANA<span class="text-accent">.</span>
+        </div>
 
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-darkbg/80 backdrop-blur-md">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Navegação Principal">
-            <div class="text-white font-extrabold text-xl tracking-tighter">
-                LUANA<span class="text-accent">.</span>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
-                <a href="#problema" class="hover:text-accent transition-colors">O Problema</a>
-                <a href="#solucao" class="hover:text-accent transition-colors">Solução</a>
-                <a href="#portfolio" class="hover:text-accent transition-colors">Portfólio</a>
-                <a href="#contato" class="hover:text-accent transition-colors">Contato</a>
-            </div>
+        <div
+          class="hidden md:flex items-center space-x-10 text-[13px] font-medium tracking-wide"
+        >
+          <a href="#solucao" class="hover:text-white transition-colors"
+            >O que faço</a
+          >
+          <a href="#problema" class="hover:text-accent transition-colors"
+            >Onde vazas</a
+          >
+          <a href="#portfolio" class="hover:text-white transition-colors"
+            >Portfólio</a
+          >
+          <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+        </div>
 
-            <a href="#contato" class="inline-flex items-center justify-center px-6 py-2.5 bg-accent hover:bg-accent/90 text-white rounded-full text-sm font-bold transition-all shadow-lg shadow-accent/20">
-                Agendar conversa
-            </a>
-        </nav>
+        <a
+          href="#contato"
+          class="inline-flex items-center justify-center px-6 py-2.5 bg-accent hover:bg-accent/90 text-white rounded-full text-sm font-bold transition-all shadow-lg shadow-accent/20"
+        >
+          Agendar conversa
+        </a>
+      </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="relative pt-44 pb-32 px-6 hero-glow overflow-hidden">
-            <div class="max-w-5xl mx-auto text-center relative z-10">
-                <span class="inline-block px-4 py-1.5 mb-8 text-[10px] font-bold tracking-[0.2em] uppercase bg-accent/10 text-accent border border-accent/20 rounded-full">
-                    Especialista em Retenção para SaaS
-                </span>
-                <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight text-gradient">
-                    Seu SaaS não perde clientes porque é ruim. <br/>
-                    <span class="text-accent text-gradient">Perde porque ninguém ensina o usuário a usar.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-                    Eu organizo a comunicação do seu SaaS do onboarding ao pós-venda, para aumentar o uso e diminuir cancelamentos.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#contato" class="w-full sm:w-auto px-10 py-5 bg-white text-black font-extrabold rounded-2xl hover:bg-accent hover:text-white transition-all transform hover:scale-[1.02] flex items-center justify-center gap-3">
-                        Agendar conversa <i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i>
-                    </a>
+      <!-- Hero Section -->
+      <section
+        class="relative pt-48 pb-32 px-6 hero-glow overflow-hidden bg-darkbg"
+      >
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+          <span
+            class="inline-block px-4 py-1.5 mb-8 text-[10px] font-bold tracking-[0.25em] uppercase bg-white/5 text-zinc-400 border border-white/10 rounded-full"
+          >
+            SaaS Retention Strategy
+          </span>
+          <h1
+            class="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter text-gradient"
+          >
+            Seu SaaS não perde clientes porque é ruim. <br />
+            <span class="text-accent"
+              >Perde porque ninguém ensina o usuário a usar.</span
+            >
+          </h1>
+          <p
+            class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-12 leading-relaxed"
+          >
+            Eu organizo a comunicação do seu SaaS do onboarding ao pós-venda,
+            para aumentar o uso e diminuir cancelamentos.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <a
+              href="#contato"
+              class="w-full sm:w-auto px-10 py-5 bg-white text-black font-black rounded-2xl hover:bg-accent hover:text-white transition-all flex items-center justify-center gap-3 group"
+            >
+              Agendar conversa
+              <i
+                data-lucide="arrow-right"
+                class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solução Section (Background Surface/Zinc-900) -->
+      <section
+        id="solucao"
+        class="py-24 px-6 bg-surface border-y border-white/5"
+      >
+        <div
+          class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center"
+        >
+          <div class="flex-1">
+            <h2
+              class="text-4xl font-black text-white mb-8 leading-tight uppercase tracking-tighter"
+            >
+              Eu organizo o
+              <span class="text-accent text-gradient">back-end</span> do seu
+              SaaS
+            </h2>
+            <p class="text-lg text-zinc-400 mb-10 leading-relaxed font-light">
+              Trazer leads ajuda. Mas o resultado vem quando mais gente usa o
+              produto e menos gente cancela. O meu trabalho consiste em:
+            </p>
+
+            <ul class="space-y-8">
+              <li class="flex items-start gap-4 text-zinc-200">
+                <div
+                  class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent"
+                >
+                  <i data-lucide="check" class="w-4 h-4"></i>
                 </div>
+                <span class="font-medium"
+                  >Organizar os fluxos para guiar o usuário passo a passo dentro
+                  do produto;</span
+                >
+              </li>
+              <li class="flex items-start gap-4 text-zinc-200">
+                <div
+                  class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent"
+                >
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <span class="font-medium leading-relaxed"
+                  >Criar e-mails e mensagens de WhatsApp que entram na hora
+                  certa, de acordo com o que a pessoa faz (usa pouco, some,
+                  esfria, está perto de renovar, precisa de um empurrão, pode
+                  voltar);</span
+                >
+              </li>
+              <li class="flex items-start gap-4 text-zinc-200">
+                <div
+                  class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent"
+                >
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <span class="font-medium"
+                  >Ajustar a forma como o produto é explicado para o usuário
+                  entender o que fazer e como usar no dia a dia.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1 glass-card p-10 rounded-[2.5rem] relative">
+            <h3
+              class="text-xl font-bold text-white mb-8 flex items-center gap-3"
+            >
+              <i data-lucide="trending-up" class="text-emerald-500"></i>
+              O que melhora na prática:
+            </h3>
+            <ul class="space-y-5 text-sm">
+              <li
+                class="flex items-center justify-between py-3 border-b border-white/5"
+              >
+                <span class="text-zinc-300 font-medium"
+                  >menos usuários e leads parados</span
+                >
+                <span class="text-emerald-500 font-bold tracking-tighter"
+                  >↑</span
+                >
+              </li>
+              <li
+                class="flex items-center justify-between py-3 border-b border-white/5"
+              >
+                <span class="text-zinc-300 font-medium"
+                  >menos cancelamento por falta de uso</span
+                >
+                <span class="text-rose-500 font-bold tracking-tighter">↓</span>
+              </li>
+              <li
+                class="flex items-center justify-between py-3 border-b border-white/5"
+              >
+                <span class="text-zinc-300 font-medium"
+                  >mais recuperação de leads e ex-clientes</span
+                >
+                <span class="text-emerald-400 font-bold tracking-tighter"
+                  >↑</span
+                >
+              </li>
+              <li
+                class="flex items-center justify-between py-3 border-b border-white/5"
+              >
+                <span class="text-zinc-300 font-medium text-pretty"
+                  >mais renovações e upgrades</span
+                >
+                <span class="text-emerald-400 font-bold tracking-tighter"
+                  >↑</span
+                >
+              </li>
+              <li class="flex items-center justify-between py-3">
+                <span class="text-zinc-300 font-medium"
+                  >menos suporte repetindo as mesmas explicações</span
+                >
+                <span class="text-rose-500 font-bold tracking-tighter">↓</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a
+            href="#contato"
+            class="inline-flex items-center justify-center px-10 py-4 bg-accent hover:bg-accent/90 text-white rounded-2xl text-base font-black transition-all shadow-lg shadow-accent/20"
+          >
+            Agendar conversa
+          </a>
+        </div>
+      </section>
+
+      <!-- Problema Section (Background Darkbg/Zinc-950) -->
+      <section id="problema" class="py-24 px-6 bg-darkbg">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight"
+            >
+              Onde a receita do seu SaaS está vazando
+            </h2>
+            <p class="text-zinc-500 text-lg">
+              Mesmo com um bom produto, você perde dinheiro quando:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article
+              class="glass-card p-8 rounded-3xl hover:border-accent/40 transition-all group"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors"
+              >
+                <i data-lucide="user-minus"></i>
+              </div>
+              <h3 class="text-white font-bold text-lg mb-2 leading-snug">
+                O usuário entra e não sabe por onde começar
+              </h3>
+              <p class="text-zinc-500 text-[13px]">
+                A falta de Onboarding gera o abandono do trial nos primeiros
+                minutos.
+              </p>
+            </article>
+            <article
+              class="glass-card p-8 rounded-3xl hover:border-accent/40 transition-all group"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors"
+              >
+                <i data-lucide="zap-off"></i>
+              </div>
+              <h3 class="text-white font-bold text-lg mb-2 leading-snug">
+                O usuário usa pouco e some após o trial
+              </h3>
+              <p class="text-zinc-500 text-[13px]">
+                Sem comunicação de back-end, o lead esfria e não vê o valor
+                real.
+              </p>
+            </article>
+            <article
+              class="glass-card p-8 rounded-3xl hover:border-accent/40 transition-all group"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors"
+              >
+                <i data-lucide="alert-circle"></i>
+              </div>
+              <h3 class="text-white font-bold text-lg mb-2 leading-snug">
+                Cancelamento por "não ajudou em nada"
+              </h3>
+              <p class="text-zinc-500 text-[13px]">
+                Churn silencioso vindo de clientes que nunca aprenderam a
+                extrair ROI.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section (Background Surface) -->
+      <section
+        id="portfolio"
+        class="py-24 px-6 border-y border-white/5 bg-surface"
+      >
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Portfólio
+          </h2>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div class="glass-card p-6 rounded-2xl text-center">
+              <p class="text-white font-bold text-sm">E-mails</p>
             </div>
-        </section>
-
-        <!-- Problema Section -->
-        <section id="problema" class="py-24 px-6 border-y border-white/5">
-            <div class="max-w-6xl mx-auto">
-                <div class="mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Onde a receita do seu SaaS está vazando</h2>
-                    <p class="text-slate-400 text-lg">Mesmo com um bom produto, você perde dinheiro quando:</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Card 1 -->
-                    <article class="glass-card p-8 rounded-3xl hover:border-accent/30 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
-                            <i data-lucide="user-minus" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-white font-medium text-lg mb-2">Abandono no Onboarding</h3>
-                        <p class="text-slate-400 text-sm">O usuário entra e não sabe por onde começar, resultando em desistência imediata.</p>
-                    </article>
-                    <!-- Card 2 -->
-                    <article class="glass-card p-8 rounded-3xl hover:border-accent/30 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
-                            <i data-lucide="zap-off" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-white font-medium text-lg mb-2">Baixa Ativação</h3>
-                        <p class="text-slate-400 text-sm">O usuário usa pouco e some. O valor real do produto nunca é percebido.</p>
-                    </article>
-                    <!-- Card 3 -->
-                    <article class="glass-card p-8 rounded-3xl hover:border-accent/30 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
-                            <i data-lucide="target" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-white font-medium text-lg mb-2">Leads Perdidos</h3>
-                        <p class="text-slate-400 text-sm">Tem leads que testaram o produto, mas não compraram por falta de condução adequada.</p>
-                    </article>
-                </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+              <p class="text-white font-bold text-sm">Landing Pages</p>
             </div>
-        </section>
-
-        <!-- Solução Section -->
-        <section id="solucao" class="py-24 px-6 bg-surface/50">
-            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
-                <div class="flex-1">
-                    <h2 class="text-4xl font-extrabold text-white mb-8 leading-tight">Eu organizo o <span class="text-accent underline decoration-accent/20 underline-offset-8 text-gradient">back-end</span> do seu SaaS</h2>
-                    <p class="text-lg text-slate-400 mb-10 leading-relaxed font-light">
-                        Trazer leads ajuda. Mas o resultado real vem quando mais gente usa o produto e menos gente cancela.
-                    </p>
-                    
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4 text-slate-200">
-                            <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent">
-                                <i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>
-                            </div>
-                            <span>Organizar os fluxos para guiar o usuário passo a passo dentro do produto;</span>
-                        </li>
-                        <li class="flex items-start gap-4 text-slate-200">
-                            <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent">
-                                <i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>
-                            </div>
-                            <span>Criar e-mails e WhatsApp que entram na hora certa, de acordo com o comportamento;</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex-1 glass-card p-10 rounded-[2.5rem] relative">
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 blur-[50px] rounded-full" aria-hidden="true"></div>
-                    <h3 class="text-xl font-bold text-white mb-8 italic flex items-center gap-3">
-                        <i data-lucide="trending-up" class="text-emerald-400" aria-hidden="true"></i>
-                        O que melhora na prática:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center justify-between py-3 border-b border-white/5">
-                            <span class="text-slate-300">Usuários e leads ativos</span>
-                            <span class="text-emerald-400 font-bold" aria-label="Aumento">↑</span>
-                        </li>
-                        <li class="flex items-center justify-between py-3 border-b border-white/5">
-                            <span class="text-slate-300">Renovações e Upgrades</span>
-                            <span class="text-emerald-400 font-bold" aria-label="Aumento">↑</span>
-                        </li>
-                        <li class="flex items-center justify-between py-3">
-                            <span class="text-slate-300">Churn por falta de uso</span>
-                            <span class="text-rose-500 font-bold text-lg" aria-label="Diminuição">↓</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+              <p class="text-white font-bold text-sm">Anúncios</p>
             </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-24 px-6 border-y border-white/5">
-            <div class="max-w-6xl mx-auto text-center">
-                <div class="mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Portfólio</h2>
-                    <p class="text-slate-400 max-w-xl mx-auto">Copywriting estratégico organizado por categorias de entrega.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 mb-12">
-                    <div class="glass-card p-6 rounded-2xl text-center group cursor-pointer hover:bg-accent/5 transition-all">
-                        <i data-lucide="mail" class="w-6 h-6 text-accent mx-auto mb-3" aria-hidden="true"></i>
-                        <p class="text-white font-semibold">E-mails</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl text-center group cursor-pointer hover:bg-accent/5 transition-all">
-                        <i data-lucide="layout" class="w-6 h-6 text-accent mx-auto mb-3" aria-hidden="true"></i>
-                        <p class="text-white font-semibold">LPs</p>
-                    </div>
-                </div>
-
-                <button class="px-8 py-3 border border-white/10 rounded-xl hover:bg-white/5 transition-all font-medium flex items-center gap-2 mx-auto">
-                    Acessar portfólio completo <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
-                </button>
+            <div class="glass-card p-6 rounded-2xl text-center">
+              <p class="text-white font-bold text-sm">Roteiros</p>
             </div>
-        </section>
+          </div>
+          <button
+            class="px-8 py-3 border border-zinc-800 hover:border-accent/50 rounded-xl hover:bg-white/5 transition-all text-[10px] font-bold tracking-[0.25em] uppercase text-zinc-400"
+          >
+            Acessar portfólio completo
+          </button>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contato" class="py-24 px-6 bg-surface/50 border-t border-white/5">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold text-white mb-4">Agende uma Conversa</h2>
-                    <p class="text-slate-400">Preencha o formulário abaixo para avaliarmos o seu caso.</p>
-                </div>
-
-                <form id="contactForm" class="glass-card p-8 rounded-3xl space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Nome</label>
-                            <input type="text" id="name" name="name" required placeholder="Seu nome" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white transition-all">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="seu@email.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white transition-all">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="company" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Seu SaaS / Empresa</label>
-                        <input type="text" id="company" name="company" placeholder="Nome da empresa" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white transition-all">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Como posso te ajudar?</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre seu gargalo de retenção..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white transition-all resize-none"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-4 bg-accent text-white font-bold rounded-2xl hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2">
-                        Enviar Mensagem <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
-                    </button>
-                    <p id="formStatus" class="text-center text-xs mt-4 hidden" aria-live="polite"></p>
-                </form>
+      <!-- Sobre Section (Background Darkbg) -->
+      <section id="sobre" class="py-24 px-6 bg-darkbg">
+        <div
+          class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center"
+        >
+          <div
+            class="w-72 h-96 bg-zinc-900 rounded-[2rem] overflow-hidden border border-white/10 relative shadow-2xl flex-shrink-0 group"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center text-zinc-800 font-black uppercase tracking-widest text-[11px] group-hover:scale-105 transition-transform duration-700"
+            >
+              Foto Profissional
             </div>
-        </section>
+            <div
+              class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black via-black/80 to-transparent"
+            >
+              <p class="text-white font-black text-xl tracking-tight">
+                Luana Queiroz
+              </p>
+              <p
+                class="text-accent text-[10px] font-bold uppercase tracking-[0.2em]"
+              >
+                Copywriter & Estrategista
+              </p>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <h2
+              class="text-3xl font-black text-white mb-6 uppercase tracking-tight"
+            >
+              Experiência e Autoridade
+            </h2>
+            <div class="grid grid-cols-2 gap-12 mb-10">
+              <div>
+                <span
+                  class="block text-4xl font-black text-accent tracking-tighter"
+                  >+60</span
+                >
+                <span
+                  class="text-[10px] uppercase font-bold tracking-[0.2em] text-zinc-500"
+                  >Projetos Atendidos</span
+                >
+              </div>
+              <div>
+                <span
+                  class="block text-4xl font-black text-accent tracking-tighter"
+                  >R$ 1Mi+</span
+                >
+                <span
+                  class="text-[10px] uppercase font-bold tracking-[0.2em] text-zinc-500"
+                  >Vendas Geradas</span
+                >
+              </div>
+            </div>
+            <p class="text-zinc-400 leading-relaxed mb-6">
+              Sou Luana Queiroz. Tenho 5 anos de experiência em comunicação e
+              estratégia, atendendo agências de marketing, SaaS e empresas de
+              nutracêuticos.
+            </p>
+            <p class="text-zinc-200 leading-relaxed font-semibold">
+              Ajudei a gerar mais de R$ 1 milhão em vendas através de estratégia
+              e textos persuasivos. Hoje organizo a comunicação de back-end para
+              SaaS para o usuário entender o produto e não parar de usar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section (Background Surface/Zinc-900) -->
+      <section
+        id="contato"
+        class="py-24 px-6 bg-surface border-t border-white/5"
+      >
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tighter uppercase"
+            >
+              Agende uma Conversa
+            </h2>
+            <p class="text-zinc-500">
+              Preencha o formulário abaixo para avaliarmos o seu caso.
+            </p>
+          </div>
+
+          <div
+            class="glass-card p-10 md:p-14 rounded-3xl shadow-2xl max-w-3xl mx-auto"
+          >
+            <form id="contactForm" class="space-y-10">
+              <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-600 mb-4"
+                    >Nome</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Seu nome"
+                    class="w-full rounded-xl px-5 py-4 text-white placeholder:text-zinc-700"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-600 mb-4"
+                    >E-Mail</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="seu@email.com"
+                    class="w-full rounded-xl px-5 py-4 text-white placeholder:text-zinc-700"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="company"
+                  class="block text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-600 mb-4"
+                  >Seu SaaS / Empresa</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Nome da empresa"
+                  class="w-full rounded-xl px-5 py-4 text-white placeholder:text-zinc-700"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-600 mb-4"
+                  >Como posso te ajudar?</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Conte um pouco sobre seu gargalo de retenção..."
+                  class="w-full rounded-xl px-5 py-4 text-white resize-none placeholder:text-zinc-700"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-5 bg-accent text-white font-black rounded-2xl hover:bg-accent/90 transition-all shadow-xl shadow-accent/20 flex items-center justify-center gap-3 text-lg group"
+              >
+                Enviar Mensagem
+                <i
+                  data-lucide="send"
+                  class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                ></i>
+              </button>
+
+              <p
+                id="formStatus"
+                class="text-center text-[13px] mt-4 hidden font-semibold"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-16 px-6 text-center border-t border-white/5">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="text-white font-extrabold text-xl tracking-tighter">
-                LUANA<span class="text-accent">.</span>
-            </div>
-            
-            <div class="flex items-center space-x-8">
-                <a href="#" aria-label="LinkedIn de Luana Queiroz" class="text-slate-500 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
-                <a href="#" aria-label="Instagram de Luana Queiroz" class="text-slate-500 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i> Instagram</a>
-                <a href="#" aria-label="Conversar no WhatsApp" class="text-slate-500 hover:text-white transition-colors flex items-center gap-2 font-bold text-accent"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
-            </div>
-
-            <p class="text-slate-600 text-[10px] tracking-widest uppercase font-medium">
-                © 2024 • Luana Queiroz • Copywriting
-            </p>
+    <!-- Rodapé -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-darkbg">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <div class="text-white font-extrabold text-2xl tracking-tighter">
+          LUANA<span class="text-accent">.</span>
         </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <a
+            href="#"
+            class="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors"
+          >
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+            <span class="text-sm font-semibold">LinkedIn</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors"
+          >
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+            <span class="text-sm font-semibold">Instagram</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors"
+          >
+            <!-- Ícone do WhatsApp via SVG para fidelidade à marca -->
+            <svg
+              class="w-5 h-5 fill-current"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.634 1.437h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
+            <span class="text-sm font-semibold">WhatsApp</span>
+          </a>
+        </div>
+
+        <div
+          class="text-zinc-700 text-[10px] tracking-[0.1em] uppercase font-bold"
+        >
+          © 2026 • LUANA QUEIROZ • COPYWRITING
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Inicialização tardia dos ícones para não bloquear renderização
-        window.addEventListener('load', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
+      window.addEventListener("load", () => {
+        if (typeof lucide !== "undefined") {
+          lucide.createIcons();
+        }
+      });
+
+      const contactForm = document.getElementById("contactForm");
+      const formStatus = document.getElementById("formStatus");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        formStatus.classList.remove("hidden");
+        formStatus.textContent = "Enviando...";
+        formStatus.className =
+          "text-center text-[13px] mt-4 text-accent font-semibold";
+
+        setTimeout(() => {
+          formStatus.textContent = "Mensagem enviada com sucesso!";
+          formStatus.className =
+            "text-center text-[13px] mt-4 text-emerald-500 font-bold";
+          contactForm.reset();
+        }, 1000);
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
             }
-        });
+          });
+        },
+        { threshold: 0.1 },
+      );
 
-        const contactForm = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formStatus.classList.remove('hidden');
-            formStatus.textContent = 'Enviando mensagem...';
-            formStatus.className = 'text-center text-xs mt-4 text-accent';
-
-            setTimeout(() => {
-                formStatus.textContent = 'Mensagem enviada com sucesso!';
-                formStatus.className = 'text-center text-xs mt-4 text-emerald-400';
-                contactForm.reset();
-            }, 1000);
-        });
-
-        // Observer leve para animações
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'all 0.6s ease-out';
-            observer.observe(section);
-        });
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+        observer.observe(section);
+      });
     </script>
-</body>
+  </body>
 </html>
