@@ -1,0 +1,43 @@
+@font-face {
+    font-display: swap;
+}
+
+.glass-card {
+    background: rgba(24, 24, 27, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #ffffff 40%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-glow {
+    background: radial-gradient(circle at 50% -10%,
+            rgba(79, 70, 229, 0.1) 0%,
+            transparent 50%);
+}
+
+input,
+textarea {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4f46e5 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+section {
+    min-height: 200px;
+}
+
+/* Sem itálicos conforme instrução */
+* {
+    font-style: normal !important;
+}
