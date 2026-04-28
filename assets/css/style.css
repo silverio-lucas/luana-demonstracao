@@ -41,3 +41,11 @@ section {
 * {
     font-style: normal !important;
 }
+
+section#problema {
+    background: rgb(18 18 20 / var(--tw-bg-opacity, 1));
+}
+
+section#solucao {
+    background: none;
+}
